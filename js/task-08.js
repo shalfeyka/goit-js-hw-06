@@ -6,53 +6,30 @@
 
 
 
-// const form = document.querySelector('.login-form');
-// const emailElement = document.querySelector('input[type ="email"]');
-// const passwordElement = document.querySelector('input[type="password:]');
-
-// form.addEventListener('submit', onFormSubmit);
-
-// let user = { 
-//     email: '', 
-//     password: '',
-// };
-
-// function onFormSubmit (event) {
-
-//     event.preventDefault();
-  
-//     if (emailElement === "" || passwordElement === "") {
-//         return console.log("All fields must be filled T_T");
-//     }
-//     else {
-//         user.email = emailElement;
-//         user.password = passwordElement;
-//     }
-
-//     event.currentTarget.reset();
-//     console.log(user);
-
-// } 
-
 const form = document.querySelector('.login-form');
 const emailElement = document.querySelector('input[type ="email"]');
-const passwordElement = document.querySelector('input[type="password:]');
-const submitButton = document.querySelector('button');
+const passwordElement = document.querySelector('input[type="password"]'); 
+
+form.addEventListener('submit', onFormSubmit);
 
 let user = { 
     email: '', 
     password: '',
-    };
+};
 
-    form.addEventListener('submit', () => {
-       
-        if (emailElement || passwordElement === '') {
-            alert('All fields must be filled T_T');
-        }
-        else {
-            user.email = emailElement;
-            user.password = passwordElement;
-        }
-        document.querySelector('.login-form').reset();
-        return user;
-    })
+function onFormSubmit (event) {
+
+    event.preventDefault();
+  
+    if (emailElement === "" || passwordElement === "") {
+        return console.log("All fields must be filled T_T");
+    }
+    else {
+        user.email = emailElement;
+        user.password = passwordElement;
+    }
+
+    event.currentTarget.reset();
+    console.log(user);
+
+} 
