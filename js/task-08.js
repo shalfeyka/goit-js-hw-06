@@ -25,8 +25,8 @@ function onFormSubmit (event) {
         return console.log("All fields must be filled T_T");
     }
     else {
-        user.email = emailElement;
-        user.password = passwordElement;
+        user.email = emailElement.value; 
+        user.password = passwordElement.value;
     }
 
     event.currentTarget.reset();
